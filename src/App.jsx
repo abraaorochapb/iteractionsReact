@@ -4,6 +4,7 @@ import RenderingKeys from './components/renderingkeys'
 import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CarDetails'
+import Container from './components/Container'
 
 {/* Renderizando listas com componentes */}
 const cars = [
@@ -25,6 +26,14 @@ function App() {
       {cars.map((car) => (
         <CarDetails key={car.id} brand={car.brand} km={car.km} color={car.color} />
       ))}
+
+      {/* Children prop */}
+      <Container>
+        <h2>Teste</h2>
+        <div>
+          Meu container children
+        </div>
+      </Container>
     </>
   )
 }
