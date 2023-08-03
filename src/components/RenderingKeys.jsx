@@ -10,7 +10,7 @@ const [users,setUsers] = useState([
 
 const deleteRandom = () => {
   const randomIndex = Math.floor(Math.random() * 4)
-  setUsers((prevUsers) => prevUsers.filter((user) => user.id !== randomIndex))
+  setUsers((prevUsers) => prevUsers.filter((user) => randomIndex !== user.id ))
 }
   
   return (
